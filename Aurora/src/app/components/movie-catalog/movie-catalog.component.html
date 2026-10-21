@@ -1,0 +1,19 @@
+<section>
+  <div>
+    <p>Подборка Aurora</p>
+    <h2>Популярные фильмы</h2>
+  </div>
+
+  <nav aria-label="Жанры фильмов">
+    <button type="button">Все</button>
+    <button type="button">Драма</button>
+    <button type="button">Фантастика</button>
+    <button type="button">Триллер</button>
+  </nav>
+
+  <div>
+    @for (movie of movies; track movie.id) {
+      <app-movie-card [movie]="movie" />
+    }
+  </div>
+</section>
